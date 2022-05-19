@@ -1,0 +1,10 @@
+.readmore{
+    background-color: red;
+    color:black;
+}
+
+
+.readmore:hover{
+    background-color: aqua;
+
+}

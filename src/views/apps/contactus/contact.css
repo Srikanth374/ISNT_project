@@ -1,0 +1,28 @@
+.readmore{
+    background-color: red;
+    color:black;
+}
+
+
+.readmore:hover{
+    background-color: aqua;
+
+}
+.isnt{
+    width: 80%;
+}
+
+.indian{
+    color: black;
+
+}
+.indian:hover{
+    color: green;
+
+}
+.society{
+    justify-content:'center';
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}

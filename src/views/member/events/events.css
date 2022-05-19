@@ -1,0 +1,40 @@
+.Read{
+    background-color: rgba(0, 0, 73, 0.644);
+    color:white;
+    display: block;
+}
+
+.Download{
+    background-color: white;
+    color:black;
+    display: block;
+    border-color: rgba(0, 0, 73, 0.644);;
+}
+.Download:hover{
+    background-color: orange;
+    color:white;
+    
+}
+.Read:hover{
+    background-color: rgba(0, 0, 73, 0.644);;
+    color:white;
+
+}
+.nde{
+    width: 70%;
+}
+
+.indian{
+    color: black;
+
+}
+.indian:hover{
+    color: black;
+
+}
+/* .society{
+    justify-content:'center';
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+} */
