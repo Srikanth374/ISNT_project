@@ -28,8 +28,7 @@ const Course = () => {
       <CardHeader>
           <CardTitle tag='h4'>Webinar</CardTitle> 
           {/* <h6>01 October 2021</h6> */}
-        </CardHeader>
-      
+        </CardHeader>   
       <CardBody>
       <h6 style={{marginTop:"-12px"}}>01 October 2021</h6>
       <CardText>
