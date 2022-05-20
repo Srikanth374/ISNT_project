@@ -26,8 +26,7 @@ const Course = () => {
         <Col md="12">
       <Card>
       <CardHeader>
-          <CardTitle tag='h4'>Webinar</CardTitle> 
-         
+          <CardTitle tag='h4'>Webinar</CardTitle>          
         </CardHeader>   
       <CardBody>
       <h6 style={{marginTop:"-12px"}}>01 October 2021</h6>
