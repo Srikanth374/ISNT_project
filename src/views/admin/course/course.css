@@ -1,0 +1,8 @@
+.readmore{
+    background-color: rgba(0, 0, 73, 0.644);
+    color:black;
+}
+//remote
+.readmore:hover{
+    color: white;
+}

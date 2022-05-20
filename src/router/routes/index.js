@@ -4,6 +4,7 @@ import FormRoutes from './Forms'
 import PagesRoutes from './Pages'
 import TablesRoutes from './Tables'
 import MemberRoutes from './Member'
+import AdminRoutes from './Admin'
 import ChartMapsRoutes from './ChartsMaps'
 import DashboardRoutes from './Dashboards'
 import UiElementRoutes from './UiElements'
@@ -21,6 +22,7 @@ const Routes = [
   ...DashboardRoutes,
   ...AppRoutes,
   ...PagesRoutes,
+  ...AdminRoutes,
   ...MemberRoutes,
   ...UiElementRoutes,
   ...ExtensionsRoutes,

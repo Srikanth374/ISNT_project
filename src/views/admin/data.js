@@ -45,7 +45,7 @@ export const basicColumns = [
     minWidth: '310px'
   },
   {
-    name: 'Position',
+    name: 'Contact no.',
     selector: 'post',
     sortable: true,
     minWidth: '250px'
@@ -57,7 +57,7 @@ export const basicColumns = [
     minWidth: '100px'
   },
   {
-    name: 'SSSSalary',
+    name: 'Salary',
     selector: 'salary',
     sortable: true,
     minWidth: '175px'
@@ -180,12 +180,12 @@ export const multiLingColumns = [
     sortable: true,
     minWidth: '200px'
   },
-  {
-    name: 'Position',
-    selector: 'post',
-    sortable: true,
-    minWidth: '250px'
-  },
+  // {
+  //   name: 'Position',
+  //   selector: 'post',
+  //   sortable: true,
+  //   minWidth: '250px'
+  // },
   {
     name: 'Email',
     selector: 'email',
@@ -199,25 +199,32 @@ export const multiLingColumns = [
     minWidth: '150px'
   },
 
+  // {
+  //   name: 'Salary',
+  //   selector: 'salary',
+  //   sortable: true,
+  //   minWidth: '150px'
+  // },
+
   {
-    name: 'Salary',
-    selector: 'salary',
+    name: 'Contact No.',
+    selector: 'contact',
     sortable: true,
     minWidth: '150px'
   },
-  {
-    name: 'Status',
-    selector: 'status',
-    sortable: true,
-    minWidth: '150px',
-    cell: row => {
-      return (
-        <Badge color={status[row.status].color} pill>
-          {status[row.status].title}
-        </Badge>
-      )
-    }
-  },
+  // {
+  //   name: 'Status',
+  //   selector: 'status',
+  //   sortable: true,
+  //   minWidth: '150px',
+  //   cell: row => {
+  //     return (
+  //       <Badge color={status[row.status].color} pill>
+  //         {status[row.status].title}
+  //       </Badge>
+  //     )
+  //   }
+  // },
   {
     name: 'Actions',
     allowOverflow: true,
