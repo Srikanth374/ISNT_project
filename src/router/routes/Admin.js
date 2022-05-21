@@ -3,14 +3,14 @@ import { lazy } from 'react'
 
 const AdminRoutes = [
   
-  // {
-  //   path: '/member/course',
-  //   component: lazy(() => import('../../views/member/course'))
-  // },
-  // {
-  //   path: '/member/announcement',
-  //   component: lazy(() => import('../../views/member/announcement'))
-  // },
+  {
+    path: '/admin/course',
+    component: lazy(() => import('../../views/admin/course'))
+  },
+  {
+    path: '/admin/announcement',
+    component: lazy(() => import('../../views/admin/announcement'))
+  },
   // {
   //   path: '/member/account-settings',
   //   component: lazy(() => import('../../views/member/account-settings'))
@@ -19,10 +19,10 @@ const AdminRoutes = [
   //   path: '/member/contactus',
   //   component: lazy(() => import('../../views/member/contactus'))
   // },
-  // {
-  //   path: '/member/events',
-  //   component: lazy(() => import('../../views/member/events'))
-  // },
+  {
+    path: '/admin/events',
+    component: lazy(() => import('../../views/admin/events'))
+  },
   {
     path: '/admin/basic',
     component: lazy(() => import('../../views/admin/basic'))

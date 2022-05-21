@@ -6,25 +6,25 @@ export default [
         header: 'Admin'
       },
       
-      // {
-      //   id: 'announcement',
-      //   title: 'Announcements',
-      //   icon: <Users size={20} />,
-      //   navLink: '/member/announcement'
-      // },
-      // {
-      //   id: 'course',
-      //   title: 'courses',
-      //   icon: <Users size={20} />,
-      //   navLink: '/member/course'
-      // },
+      {
+        id: 'add-announcement',
+        title: 'Announcements',
+        icon: <Users size={20} />,
+        navLink: '/admin/announcement'
+      },
+      {
+        id: 'add-course',
+        title: 'courses',
+        icon: <Users size={20} />,
+        navLink: '/admin/course'
+      },
       
-      // {
-      //   id: 'events',
-      //   title: 'Events',
-      //   icon: <Users size={20} />,
-      //   navLink: '/member/events'
-      // },
+      {
+        id: 'add-events',
+        title: 'Events',
+        icon: <Users size={20} />,
+        navLink: '/admin/events'
+      },
       // {
       //   id: 'accountsettings',
       //   title: 'Account Settings',

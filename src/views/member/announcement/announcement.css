@@ -8,3 +8,8 @@
     color: white;
 
 }
+.delete{
+    background-color: rgba(247, 8, 8, 0.877);
+    color:black;
+    margin-right: 15px;
+}

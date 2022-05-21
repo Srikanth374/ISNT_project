@@ -20,7 +20,10 @@ const Announcement = () => {
       {/* <Button className='d-flex justify-content-center' color='primary' outline onClick={handleBlock}>
         Block
       </Button> */}
-      <div  style={{display: 'flex', justifyContent: 'right'}}><a className='btn  readmore'   href='#'>Read more</a></div>
+      <div style={{display: 'flex', justifyContent: 'right'}}>
+          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          <div><a className='btn  readmore'   href='#'>Read more</a></div>
+      </div>
     </CardBody>
     </Card>
         </Col>
@@ -38,7 +41,10 @@ const Announcement = () => {
       {/* <Button className='d-flex justify-content-center' color='primary' outline onClick={handleBlock}>
         Block
       </Button> */}
-      <div  style={{display: 'flex', justifyContent: 'right'}}><a className='btn  readmore'   href='#'>Read more</a></div>
+      <div style={{display: 'flex', justifyContent: 'right'}}>
+          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          <div><a className='btn  readmore'   href='#'>Read more</a></div>
+      </div>
     </CardBody>
     </Card>
         </Col>
@@ -56,7 +62,10 @@ const Announcement = () => {
       {/* <Button className='d-flex justify-content-center' color='primary' outline onClick={handleBlock}>
         Block
       </Button> */}
-      <div  style={{display: 'flex', justifyContent: 'right'}}><a className='btn  readmore'   href='#'>Read more</a></div>
+      <div style={{display: 'flex', justifyContent: 'right'}}>
+          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          <div><a className='btn  readmore'   href='#'>Read more</a></div>
+      </div>
     </CardBody>
     </Card>
         </Col>
@@ -74,7 +83,10 @@ const Announcement = () => {
       {/* <Button className='d-flex justify-content-center' color='primary' outline onClick={handleBlock}>
         Block
       </Button> */}
-      <div  style={{display: 'flex', justifyContent: 'right'}}><a className='btn  readmore'   href='#'>Read more</a></div>
+      <div style={{display: 'flex', justifyContent: 'right'}}>
+          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          <div><a className='btn  readmore'   href='#'>Read more</a></div>
+      </div>
     </CardBody>
     </Card>
         </Col>
@@ -92,7 +104,10 @@ const Announcement = () => {
       {/* <Button className='d-flex justify-content-center' color='primary' outline onClick={handleBlock}>
         Block
       </Button> */}
-      <div  style={{display: 'flex', justifyContent: 'right'}}><a className='btn  readmore'   href='#'>Read more</a></div>
+      <div style={{display: 'flex', justifyContent: 'right'}}>
+          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          <div><a className='btn  readmore'   href='#'>Read more</a></div>
+      </div>
     </CardBody>
     </Card>
         </Col>

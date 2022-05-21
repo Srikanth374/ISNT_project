@@ -1,8 +1,15 @@
 .readmore{
     background-color: rgba(0, 0, 73, 0.644);
     color:black;
+    margin-right: 15px;
 }
-//remote
+/* //remote */
 .readmore:hover{
     color: white;
+}
+
+.delete{
+    background-color: rgba(247, 8, 8, 0.877);
+    color:black;
+    margin-right: 15px;
 }
