@@ -46,7 +46,7 @@ export const basicColumns = [
   },
   {
     name: 'Contact no.',
-    selector: 'post',
+    selector: 'contact',
     sortable: true,
     minWidth: '250px'
   },
