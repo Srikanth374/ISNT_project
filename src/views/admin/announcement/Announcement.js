@@ -1,26 +1,18 @@
 // import { AlignCenter } from 'react-feather'
-// import { Card, CardHeader, CardTitle, CardBody, CardText, Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import { Card, CardHeader, CardTitle, CardBody, CardText, Row, Col, Button, Modal, Input, Label,  FormGroup, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 // import * as Icons from 'react-feather'
 // import UILoader from '@components/ui-loader'
 import  './announcement.css'
-import { Card, CardHeader, CardTitle, CardBody, CardText, Button, Row, Col, FormGroup, Input, Label } from 'reactstrap'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { useState } from 'react' 
 
 const MySwal = withReactContent(Swal)
 
-  const Announcement = () => {  
-    
-    const announcementForm = () => {
-      return MySwal.fire(
-        <FormGroup>
-              <Label for='email'>Email:</Label>
-              <Input type='email' id='email' placeholder='Email Address' />
-        </FormGroup>
-      )
-    }
-
+  const Announcement = () => { 
+    const [formAnn, setformAnn] = useState(false)
    const handleConfirmCancel = () => {
+   
       return MySwal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -55,12 +47,32 @@ const MySwal = withReactContent(Swal)
       })
     }
 
-    // const [basicModal, setBasicModal] = useState(false)
+  //   // const [basicModal, setBasicModal] = useState(false)
   return (   
     <>
+    
+        <Modal isOpen={formAnn} toggle={() => setformAnn(!formAnn)}>
+          <ModalHeader toggle={() => setformAnn(!formAnn)}>Add Announcement</ModalHeader>
+          <ModalBody>
+            <FormGroup>
+              <Label>Title</Label>
+              <Input type='text' placeholder='Enter title' />
+            </FormGroup>
+            <FormGroup>
+              <Label>Description</Label>
+              <Input type='textarea'  />
+            </FormGroup>
+          </ModalBody>
+          <ModalFooter>
+            <Button color='primary' onClick={() => setformAnn(!formAnn)}>
+              Add
+            </Button>{' '}
+          </ModalFooter>
+        </Modal>
+        
     <Row>
      <Col md="12"   style={{display: 'flex', justifyContent: 'right', bottom:'12px'}}>
-     <Button.Ripple className='d-flex justify-content-center' color='primary'  onClick={announcementForm} outline >
+     <Button.Ripple className='d-flex justify-content-center' color='primary'  onClick={() => setformAnn(!formAnn)} outline >
         Add Announcement
       </Button.Ripple>
      </Col>
@@ -93,29 +105,31 @@ const MySwal = withReactContent(Swal)
     </Card>
         </Col>
     </Row>
-    {/* <Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
-     <ModalHeader toggle={() => setBasicModal(!basicModal)}>Delete</ModalHeader>
-     <ModalBody className='d-flex justify-content-center'>
-      <div style={{color:'red'}} ><Icons.AlertCircle size={70}/></div> <br /> <br /> 
-     </ModalBody>
-     <div className='d-flex justify-content-center'><h2>Are You Sure</h2></div>
-     <div className='d-flex justify-content-center'><p>You won't be able to revert this!</p></div>
+     {/* <Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
+  //    <ModalHeader toggle={() => setBasicModal(!basicModal)}>Delete</ModalHeader>
+  //    <ModalBody className='d-flex justify-content-center'>
+  //     <div style={{color:'red'}} ><Icons.AlertCircle size={70}/></div> <br /> <br /> 
+  //    </ModalBody>
+  //    <div className='d-flex justify-content-center'><h2>Are You Sure</h2></div>
+  //    <div className='d-flex justify-content-center'><p>You won't be able to revert this!</p></div>
      
-     <ModalFooter>
-     <div style={{display:'flex', justifyContent:'space-between', width:'100%'}}>
+  //    <ModalFooter>
+  //    <div style={{display:'flex', justifyContent:'space-between', width:'100%'}}>
       
-      <Button.Ripple className='d-flex justify-content-center delete' style={{color:"white"}} outline onClick={() => setBasicModal(!basicModal)}>
-        Yes, delete it!
-      </Button.Ripple>
-      <Button.Ripple className='d-flex justify-content-center' color='primary' outline onClick={() => setBasicModal(!basicModal)} >
-        Cancle
-      </Button.Ripple>
+  //     <Button.Ripple className='d-flex justify-content-center delete' style={{color:"white"}} outline onClick={() => setBasicModal(!basicModal)}>
+  //       Yes, delete it!
+  //     </Button.Ripple>
+  //     <Button.Ripple className='d-flex justify-content-center' color='primary' outline onClick={() => setBasicModal(!basicModal)} >
+  //       Cancle
+  //     </Button.Ripple>
 
-      </div>
+  //     </div>
     
-     </ModalFooter>
-   </Modal> */}
-     </>
-  )
+  //    </ModalFooter>
+  //  </Modal> */
   }
+
+     </>
+  ) 
+}
 export default Announcement
