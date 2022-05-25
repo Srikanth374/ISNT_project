@@ -1,53 +1,53 @@
 // import { AlignCenter } from 'react-feather'
 import { Card, CardHeader, CardTitle, CardBody, CardText, Row, Col, Button, Modal, Input, Label,  FormGroup, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
-// import * as Icons from 'react-feather'
+import * as Icons from 'react-feather'
 // import UILoader from '@components/ui-loader'
 import  './announcement.css'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+// import Swal from 'sweetalert2'
+// import withReactContent from 'sweetalert2-react-content'
 import { useState } from 'react' 
 
-const MySwal = withReactContent(Swal)
+// const MySwal = withReactContent(Swal)
 
   const Announcement = () => { 
     const [formAnn, setformAnn] = useState(false)
-   const handleConfirmCancel = () => {
+  //  const handleConfirmCancel = () => {
    
-      return MySwal.fire({
-        title: 'Are you sure?',
-        text: "You won't be able to revert this!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
-        customClass: {
-          confirmButton: 'btn btn-danger',
-          cancelButton: 'btn btn-primary ml-1'
-        },
-        buttonsStyling: false
-      }).then(function (result) {
-        if (result.value) {
-          MySwal.fire({
-            icon: 'success',
-            title: 'Deleted!',
-            text: 'Your file has been deleted.',
-            customClass: {
-              confirmButton: 'btn btn-success'
-            }
-          })
-        } else if (result.dismiss === MySwal.DismissReason.cancel) {
-          MySwal.fire({
-            title: 'Cancelled',
-            text: 'Your imaginary file is safe :)',
-            icon: 'error',
-            customClass: {
-              confirmButton: 'btn btn-success'
-            }
-          })
-        }
-      })
-    }
+  //     return MySwal.fire({
+  //       title: 'Are you sure?',
+  //       text: "You won't be able to revert this!",
+  //       icon: 'warning',
+  //       showCancelButton: true,
+  //       confirmButtonText: 'Yes, delete it!',
+  //       customClass: {
+  //         confirmButton: 'btn btn-danger',
+  //         cancelButton: 'btn btn-primary ml-1'
+  //       },
+  //       buttonsStyling: false
+  //     }).then(function (result) {
+  //       if (result.value) {
+  //         MySwal.fire({
+  //           icon: 'success',
+  //           title: 'Deleted!',
+  //           text: 'Your file has been deleted.',
+  //           customClass: {
+  //             confirmButton: 'btn btn-success'
+  //           }
+  //         })
+  //       } else if (result.dismiss === MySwal.DismissReason.cancel) {
+  //         MySwal.fire({
+  //           title: 'Cancelled',
+  //           text: 'Your imaginary file is safe :)',
+  //           icon: 'error',
+  //           customClass: {
+  //             confirmButton: 'btn btn-success'
+  //           }
+  //         })
+  //       }
+  //     })
+  //   }
 
-  //   // const [basicModal, setBasicModal] = useState(false)
+  const [basicModal, setBasicModal] = useState(false)
   return (   
     <>
     
@@ -59,14 +59,25 @@ const MySwal = withReactContent(Swal)
               <Input type='text' placeholder='Enter title' />
             </FormGroup>
             <FormGroup>
+              <Label>Date</Label>
+              <Input type='date' placeholder='Enter title' />
+            </FormGroup>
+            <FormGroup>
+              <Label>Upload Document</Label>
+              <Input type='file' />
+            </FormGroup>
+            <FormGroup>
               <Label>Description</Label>
               <Input type='textarea'  />
             </FormGroup>
           </ModalBody>
-          <ModalFooter>
-            <Button color='primary' onClick={() => setformAnn(!formAnn)}>
-              Add
+          <ModalFooter style={{display: 'flex', justifyContent: 'space-between', bottom:'12px'}}>
+            <Button color='danger' onClick={() => setformAnn(!formAnn)}>
+              Create
             </Button>{' '}
+            <Button color='primary' onClick={() => setformAnn(!formAnn)}>
+              Cancle
+            </Button>
           </ModalFooter>
         </Modal>
         
@@ -81,52 +92,52 @@ const MySwal = withReactContent(Swal)
       <Card>
       <CardHeader>
           <CardTitle tag='h4'>Webinar</CardTitle> 
-          <h6>01 October 2021</h6>
+          <h6>2022-05-26</h6>
         </CardHeader>
       <CardBody>
       <CardText>
       ISNT (Organised by Chennai Chapter) will conduct a webinar at 1000 hrs on 23rd May 2021 on "Industry 4.0 solutions for metal testing & Flaw detection at high temperature". The talk will be delivered by Dr Maria Felice & Dr William Vickers.
       </CardText>
       <div style={{display:'flex', justifyContent:'right'}}>
-      {/* <a  className=' btn delete' style={{color:"white"}} onClick={() => setBasicModal(!basicModal)}>Delete</a>
-      <a  className=' btn readmore' style={{color:"white"}} onClick={() => setBasicModal(!basicModal)}>    Read More
-     </a> */}
-     <Col style={{display:'flex', justifyContent:'right'}} className='mb-2 mb-md-0' md='6' sm='12'>
+      <a  className=' btn delete' style={{color:"white"}} onClick={() => setBasicModal(!basicModal)}>Delete</a>
+      <a  className=' btn readmore' style={{color:"white"}} >Read More
+     </a>
+     {/* <Col style={{display:'flex', justifyContent:'right'}} className='mb-2 mb-md-0' md='6' sm='12'>
             <Button className='delete'  style={{color:"white"}} onClick={handleConfirmCancel} outline>
               Delete
             </Button>
             <Button className='readmore'  style={{color:"white"}}outline>
               Read More
             </Button>
-          </Col>
+          </Col> */}
       </div>
       
     </CardBody>
     </Card>
         </Col>
     </Row>
-     {/* <Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
-  //    <ModalHeader toggle={() => setBasicModal(!basicModal)}>Delete</ModalHeader>
-  //    <ModalBody className='d-flex justify-content-center'>
-  //     <div style={{color:'red'}} ><Icons.AlertCircle size={70}/></div> <br /> <br /> 
-  //    </ModalBody>
-  //    <div className='d-flex justify-content-center'><h2>Are You Sure</h2></div>
-  //    <div className='d-flex justify-content-center'><p>You won't be able to revert this!</p></div>
+     {<Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
+    <ModalHeader toggle={() => setBasicModal(!basicModal)}>Delete</ModalHeader>
+    <ModalBody className='d-flex justify-content-center'>
+     <div style={{color:'red'}} ><Icons.AlertCircle size={70}/></div> <br /> <br /> 
+    </ModalBody>
+    <div className='d-flex justify-content-center'><h2>Are You Sure</h2></div>
+    <div className='d-flex justify-content-center'><p>You won't be able to revert this!</p></div>
      
-  //    <ModalFooter>
-  //    <div style={{display:'flex', justifyContent:'space-between', width:'100%'}}>
+    <ModalFooter>
+    <div style={{display:'flex', justifyContent:'space-between', width:'100%'}}>
       
-  //     <Button.Ripple className='d-flex justify-content-center delete' style={{color:"white"}} outline onClick={() => setBasicModal(!basicModal)}>
-  //       Yes, delete it!
-  //     </Button.Ripple>
-  //     <Button.Ripple className='d-flex justify-content-center' color='primary' outline onClick={() => setBasicModal(!basicModal)} >
-  //       Cancle
-  //     </Button.Ripple>
+     <Button.Ripple className='d-flex justify-content-center delete' style={{color:"white"}} outline onClick={() => setBasicModal(!basicModal)}>
+       Yes, delete it!
+     </Button.Ripple>
+     <Button.Ripple className='d-flex justify-content-center' color='primary' outline onClick={() => setBasicModal(!basicModal)} >
+       Cancle
+     </Button.Ripple>
 
-  //     </div>
+     </div>
     
-  //    </ModalFooter>
-  //  </Modal> */
+    </ModalFooter>
+  </Modal> 
   }
 
      </>

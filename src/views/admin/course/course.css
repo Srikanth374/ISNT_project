@@ -10,6 +10,10 @@
 
 .delete{
     background-color: rgba(247, 8, 8, 0.877);
-    color:black;
+    color:white;
     margin-right: 15px;
+}
+.delete:hover{
+    background-color: rgba(247, 8, 8, 0.877);
+   
 }

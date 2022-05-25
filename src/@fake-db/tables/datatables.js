@@ -6,7 +6,7 @@ const data = [
     responsive_id: '',
     id: 1,
     avatar: '10.jpg',
-    full_name: "Korrie O'Crevy",
+    full_name: "Korxxxxxxxxxxxxxxxxxxxxxxxxxxrie O'Crevy",
     post: 'Nuclear Power Engineer',
     email: 'kocrevy0@thetimes.co.uk',
     contact: '+917036042517',

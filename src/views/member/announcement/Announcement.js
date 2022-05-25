@@ -21,7 +21,7 @@ const Announcement = () => {
         Block
       </Button> */}
       <div style={{display: 'flex', justifyContent: 'right'}}>
-          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          {/* <div><a className='btn  delete'   href='#'>Delete</a></div> <br/> */}
           <div><a className='btn  readmore'   href='#'>Read more</a></div>
       </div>
     </CardBody>
@@ -42,7 +42,7 @@ const Announcement = () => {
         Block
       </Button> */}
       <div style={{display: 'flex', justifyContent: 'right'}}>
-          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          {/* <div><a className='btn  delete'   href='#'>Delete</a></div> <br/> */}
           <div><a className='btn  readmore'   href='#'>Read more</a></div>
       </div>
     </CardBody>
@@ -63,7 +63,7 @@ const Announcement = () => {
         Block
       </Button> */}
       <div style={{display: 'flex', justifyContent: 'right'}}>
-          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          {/* <div><a className='btn  delete'   href='#'>Delete</a></div> <br/> */}
           <div><a className='btn  readmore'   href='#'>Read more</a></div>
       </div>
     </CardBody>
@@ -84,7 +84,7 @@ const Announcement = () => {
         Block
       </Button> */}
       <div style={{display: 'flex', justifyContent: 'right'}}>
-          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          {/* <div><a className='btn  delete'   href='#'>Delete</a></div> <br/> */}
           <div><a className='btn  readmore'   href='#'>Read more</a></div>
       </div>
     </CardBody>
@@ -105,7 +105,7 @@ const Announcement = () => {
         Block
       </Button> */}
       <div style={{display: 'flex', justifyContent: 'right'}}>
-          <div><a className='btn  delete'   href='#'>Delete</a></div> <br/>
+          {/* <div><a className='btn  delete'   href='#'>Delete</a></div> <br/> */}
           <div><a className='btn  readmore'   href='#'>Read more</a></div>
       </div>
     </CardBody>

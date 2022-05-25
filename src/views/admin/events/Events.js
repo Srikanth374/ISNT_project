@@ -30,7 +30,10 @@ const Contact = () => {
                         </Col>
                         <Col md="3">
                         <div><a className='btn  Read'   href='#'>Read more</a></div>
-                        </Col>
+                        </Col>                      
+                        <Col>
+                        <div><a className='btn' style={{color:"white", backgroundColor:"red"}}  href='#'>Delete</a></div>
+                        </Col>     
                       </Row>
                     </Col>
                   </Row>
@@ -56,6 +59,7 @@ const Contact = () => {
                         <Col md="3">
                         <div><a className='btn  Read'   href='#'>Read more</a></div>
                         </Col>
+                        <Col><a  className='btn' style={{color:"white"}} >Delete</a></Col>
                       </Row>
                     </Col>
                   </Row>
