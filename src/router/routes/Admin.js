@@ -12,6 +12,10 @@ const AdminRoutes = [
     component: lazy(() => import('../../views/admin/announcement'))
   },
   // {
+  //   path: '/admin/home',
+  //   component: lazy(() => import('../../views/admin/home'))
+  // },
+  // {
   //   path: '/member/account-settings',
   //   component: lazy(() => import('../../views/member/account-settings'))
   // },

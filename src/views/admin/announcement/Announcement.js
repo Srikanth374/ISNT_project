@@ -1,91 +1,123 @@
-// import { AlignCenter } from 'react-feather'
+
 import { Card, CardHeader, CardTitle, CardBody, CardText, Row, Col, Button, Modal, Input, Label,  FormGroup, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import * as Icons from 'react-feather'
-// import UILoader from '@components/ui-loader'
 import  './announcement.css'
-// import Swal from 'sweetalert2'
-// import withReactContent from 'sweetalert2-react-content'
-import { useState } from 'react' 
-
-// const MySwal = withReactContent(Swal)
+import { Plus } from "react-feather"
+import { useState } from "react"
+import VerticalFormIcons from "./VerticalFormIcons"
+import "@styles/base/pages/dashboard-ecommerce.scss"
+import alergif from '@src/assets/images/icons8-box-important.gif' 
+import cancelpng from '@src/assets/images/icons8-close-48.png'
+import checkgif from '@src/assets/images/icons8-ok.gif' 
 
   const Announcement = () => { 
-    const [formAnn, setformAnn] = useState(false)
-  //  const handleConfirmCancel = () => {
-   
-  //     return MySwal.fire({
-  //       title: 'Are you sure?',
-  //       text: "You won't be able to revert this!",
-  //       icon: 'warning',
-  //       showCancelButton: true,
-  //       confirmButtonText: 'Yes, delete it!',
-  //       customClass: {
-  //         confirmButton: 'btn btn-danger',
-  //         cancelButton: 'btn btn-primary ml-1'
-  //       },
-  //       buttonsStyling: false
-  //     }).then(function (result) {
-  //       if (result.value) {
-  //         MySwal.fire({
-  //           icon: 'success',
-  //           title: 'Deleted!',
-  //           text: 'Your file has been deleted.',
-  //           customClass: {
-  //             confirmButton: 'btn btn-success'
-  //           }
-  //         })
-  //       } else if (result.dismiss === MySwal.DismissReason.cancel) {
-  //         MySwal.fire({
-  //           title: 'Cancelled',
-  //           text: 'Your imaginary file is safe :)',
-  //           icon: 'error',
-  //           customClass: {
-  //             confirmButton: 'btn btn-success'
-  //           }
-  //         })
-  //       }
-  //     })
-  //   }
+
+  const [addElection, setAddElection] = useState(false)
+  const [areYouSure, setAreYouSure] = useState(false)
+  const [cancelModal, setCancelModal] = useState(false)
+  const [successModal, setSuccessModal] = useState(false)
 
   const [basicModal, setBasicModal] = useState(false)
   return (   
     <>
     
-        <Modal isOpen={formAnn} toggle={() => setformAnn(!formAnn)}>
-          <ModalHeader toggle={() => setformAnn(!formAnn)}>Add Announcement</ModalHeader>
-          <ModalBody>
-            <FormGroup>
-              <Label>Title</Label>
-              <Input type='text' placeholder='Enter title' />
-            </FormGroup>
-            <FormGroup>
-              <Label>Date</Label>
-              <Input type='date' placeholder='Enter title' />
-            </FormGroup>
-            <FormGroup>
-              <Label>Upload Document</Label>
-              <Input type='file' />
-            </FormGroup>
-            <FormGroup>
-              <Label>Description</Label>
-              <Input type='textarea'  />
-            </FormGroup>
-          </ModalBody>
-          <ModalFooter style={{display: 'flex', justifyContent: 'space-between', bottom:'12px'}}>
-            <Button color='danger' onClick={() => setformAnn(!formAnn)}>
-              Create
-            </Button>{' '}
-            <Button color='primary' onClick={() => setformAnn(!formAnn)}>
-              Cancle
-            </Button>
-          </ModalFooter>
-        </Modal>
-        
     <Row>
      <Col md="12"   style={{display: 'flex', justifyContent: 'right', bottom:'12px'}}>
-     <Button.Ripple className='d-flex justify-content-center' color='primary'  onClick={() => setformAnn(!formAnn)} outline >
-        Add Announcement
-      </Button.Ripple>
+     <>
+      <Button
+        className="ml-2"
+        color="primary"
+        onClick={() => setAddElection(!addElection)}
+      >
+        <Plus size={15} />
+        <span className="align-middle ml-50">Add Announcement</span>
+      </Button>
+      <Modal isOpen={addElection} toggle={() => setAddElection(!addElection)}>
+        <ModalHeader toggle={() => setAddElection(!addElection)}>
+          Create an Announcement
+        </ModalHeader>
+        <ModalBody>
+          <VerticalFormIcons />
+        </ModalBody>
+        <ModalFooter style={{display:'flex', width:'100', justifyContent:'space-between'}}>
+          <Button color="success" onClick={() => {
+              setAreYouSure(!areYouSure)
+            setTimeout(() => {
+              setAddElection(!addElection)
+            }, 200)
+          }}>
+            Create New Announcement!
+          </Button>
+          <Button.Ripple  color="danger" type="reset" onClick={() => {
+              setAddElection(!addElection)
+          }} >
+            Cancel
+          </Button.Ripple>
+        </ModalFooter>
+      </Modal>
+      {/* areyousure */}
+      <Modal isOpen={areYouSure} toggle={() => setAreYouSure(!areYouSure)}>
+        <ModalHeader toggle={() => setAreYouSure(!areYouSure)}>
+        </ModalHeader>
+        <ModalBody style={{textAlign:'center', display:'flex', flexDirection:'column', gap:'10px'}}>
+          <img width={85} height={85} style={{display:'block', margin:'auto'}}  src={alergif}></img>
+          <h3>Are you sure?</h3>
+          <p>You won't be able to revert this!</p>
+        </ModalBody>
+        <ModalFooter style={{display:'flex', width:'100%', justifyContent:'space-between'}}>
+          <Button color="success" onClick={() => {
+            setSuccessModal(!successModal)
+            setTimeout(() => {
+              setAreYouSure(!areYouSure)
+            }, 200)
+          }}>
+            Yes, Create New Announcement
+          </Button>
+          <Button.Ripple outline color="danger" type="reset" onClick={() => {
+              setCancelModal(!cancelModal)
+              setTimeout(() => {
+                setAreYouSure(!areYouSure)
+              }, 200)
+          }}>
+            Cancel
+          </Button.Ripple>
+        </ModalFooter>
+      </Modal>
+       {/* are you sure */}
+       {/* Cancelmodal */}
+       <Modal isOpen={cancelModal} toggle={() => setCancelModal(!cancelModal)}>
+        <ModalBody style={{textAlign:'center', display:'flex', flexDirection:'column', gap:'10px'}}>
+          <img width={85} height={85} style={{display:'block', margin:'auto'}}  src={cancelpng}></img>
+          <h3>Cancelled</h3>
+          <p>Re-Create New Election Next Time</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button style={{display:'block', margin:'auto'}} color="primary" onClick={() => {
+            setCancelModal(!cancelModal)
+           
+            }}>
+            OK
+          </Button>
+        </ModalFooter>
+      </Modal>
+        {/* Cancelmodal */}
+        {/* sucessmodal */}
+       <Modal isOpen={successModal} toggle={() => setSuccessModal(!successModal)}>
+        <ModalBody style={{textAlign:'center', display:'flex', flexDirection:'column', gap:'10px'}}>
+          <img width={85} height={85} style={{display:'block', margin:'auto'}}  src={checkgif}></img>
+          <h3>New Announcement Created</h3>
+          <p>A new Announcement have been created</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button style={{display:'block', margin:'auto'}} color="primary" onClick={() => {
+            setSuccessModal(!successModal)
+            }}>
+            OK
+          </Button>
+        </ModalFooter>
+      </Modal>
+        {/* sucessmodal */}
+    </>
      </Col>
       
       <Col md="12">
@@ -116,7 +148,7 @@ import { useState } from 'react'
     </Card>
         </Col>
     </Row>
-     {<Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
+     <Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
     <ModalHeader toggle={() => setBasicModal(!basicModal)}>Delete</ModalHeader>
     <ModalBody className='d-flex justify-content-center'>
      <div style={{color:'red'}} ><Icons.AlertCircle size={70}/></div> <br /> <br /> 
@@ -138,7 +170,7 @@ import { useState } from 'react'
     
     </ModalFooter>
   </Modal> 
-  }
+  
 
      </>
   ) 

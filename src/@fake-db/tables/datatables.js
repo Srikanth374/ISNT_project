@@ -6,7 +6,7 @@ const data = [
     responsive_id: '',
     id: 1,
     avatar: '10.jpg',
-    full_name: "Korxxxxxxxxxxxxxxxxxxxxxxxxxxrie O'Crevy",
+    full_name: "Korrie O'Crevy",
     post: 'Nuclear Power Engineer',
     email: 'kocrevy0@thetimes.co.uk',
     contact: '+917036042517',
@@ -14,6 +14,7 @@ const data = [
     start_date: '09/23/2016',
     salary: '$23896.35',
     age: '61',
+    application: 12334557,
     experience: '1 Year',
     status: 2
   },
@@ -29,6 +30,7 @@ const data = [
     start_date: '05/20/2018',
     salary: '$13633.69',
     age: '63',
+    application: 24243253,
     experience: '3 Years',
     status: 2
   },
@@ -44,6 +46,7 @@ const data = [
     start_date: '03/24/2018',
     salary: '$13076.28',
     age: '66',
+    application: 34234356,
     experience: '6 Years',
     status: 5
   },
@@ -59,6 +62,7 @@ const data = [
     start_date: '12/03/2017',
     salary: '$12336.17',
     age: '22',
+    application: 42423536,
     experience: '2 Years',
     status: 2
   },
@@ -74,6 +78,7 @@ const data = [
     start_date: '08/25/2017',
     salary: '$10909.52',
     age: '33',
+    application: 533534,
     experience: '3 Years',
     status: 2
   },
@@ -89,6 +94,7 @@ const data = [
     start_date: '06/01/2017',
     salary: '$17803.80',
     age: '61',
+    application: 642355,
     experience: '1 Year',
     status: 1
   },
@@ -104,6 +110,7 @@ const data = [
     start_date: '10/15/2017',
     salary: '$18991.67',
     age: '59',
+    application: 75345345,
     experience: '9 Years',
     status: 3
   },
@@ -119,6 +126,7 @@ const data = [
     start_date: '11/05/2016',
     salary: '$19230.13',
     age: '55',
+    application: 8235235,
     experience: '5 Years',
     status: 3
   },
@@ -134,6 +142,7 @@ const data = [
     start_date: '12/29/2018',
     salary: '$11677.32',
     age: '39',
+    application: 95335,
     experience: '9 Years',
     status: 5
   },
@@ -149,6 +158,7 @@ const data = [
     start_date: '04/19/2019',
     salary: '$15939.52',
     age: '23',
+    application: 10523235,
     experience: '3 Years',
     status: 2
   },
@@ -234,6 +244,7 @@ const data = [
     full_name: 'Robinson Brazenor',
     post: 'General Manager',
     email: 'rbrazenorf@symantec.com',
+    contact: '+917036042517',
     city: 'Gendiwu',
     start_date: '12/23/2017',
     salary: '$11953.08',
@@ -248,6 +259,7 @@ const data = [
     full_name: 'Nadia Bettenson',
     post: 'Environmental Tech',
     email: 'nbettensong@joomla.org',
+    contact: '+917036042517',
     city: 'Chabařovice',
     start_date: '07/11/2018',
     salary: '$20484.44',
@@ -262,6 +274,7 @@ const data = [
     full_name: 'Titus Hayne',
     post: 'Web Designer',
     email: 'thayneh@kickstarter.com',
+    contact: '+917036042517',
     city: 'Yangon',
     start_date: '05/25/2019',
     salary: '$16871.48',
@@ -275,6 +288,7 @@ const data = [
     avatar: '5.jpg',
     full_name: 'Roxie Huck',
     post: 'Administrative Assistant',
+    contact: '+917036042517',
     email: 'rhucki@ed.gov',
     city: 'Polýkastro',
     start_date: '04/04/2019',
@@ -290,6 +304,7 @@ const data = [
     full_name: 'Latashia Lewtey',
     post: 'Actuary',
     email: 'llewteyj@sun.com',
+    contact: '+917036042517',
     city: 'Hougong',
     start_date: '08/03/2017',
     salary: '$18303.87',

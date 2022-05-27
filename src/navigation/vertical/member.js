@@ -26,6 +26,12 @@ export default [
         navLink: '/member/events'
       },
       {
+        id: 'basic',
+        title: 'Sponsoring Member',
+        icon: <Users size={20} />,
+        navLink: '/member/basic'
+      },
+      {
         id: 'accountsettings',
         title: 'Account Settings',
         icon: <Settings size={20} />,

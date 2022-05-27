@@ -258,10 +258,10 @@ export const multiLingColumns = [
             
           </UncontrolledDropdown>
           {/* <Edit  size={15} /> */}
-          <Eye  size={20} />
+          <Eye style={{fontWeight: 'bold'}}  size={20} />
         </div>
         <Modal isOpen={basicModal} toggle={() => setBasicModal(!basicModal)}>
-          <ModalHeader toggle={() => setBasicModal(!basicModal)}>Member List</ModalHeader>
+          <ModalHeader toggle={() => setBasicModal(!basicModal)}>Sponsoring Approved</ModalHeader>
           <ModalBody className='d-flex justify-content-center'>
           <div><Icons.AlertCircle size={70}/></div> <br /> <br /> 
           </ModalBody>

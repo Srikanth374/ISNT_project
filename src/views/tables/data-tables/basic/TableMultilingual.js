@@ -143,7 +143,7 @@ const DataTableWithButtons = () => {
         sortIcon={<ChevronDown size={10} />}
         paginationDefaultPage={currentPage + 1}
         paginationComponent={CustomPagination}
-        data={searchValue.length ? filteredData : data}
+        data={data}
       />
       <CardFooter>
         <CardText className='mb-0'>

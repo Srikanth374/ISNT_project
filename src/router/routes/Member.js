@@ -22,6 +22,10 @@ const MemberRoutes = [
   {
     path: '/member/events',
     component: lazy(() => import('../../views/member/events'))
+  },
+  {
+    path: '/member/basic',
+    component: lazy(() => import('../../views/member/basic'))
   }
  
 ]

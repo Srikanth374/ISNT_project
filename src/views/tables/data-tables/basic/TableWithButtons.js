@@ -67,8 +67,9 @@ const DataTableWithButtons = () => {
           item.age.toLowerCase().startsWith(value.toLowerCase()) ||
           item.salary.toLowerCase().startsWith(value.toLowerCase()) ||
           item.start_date.toLowerCase().startsWith(value.toLowerCase()) ||
+          item.id.toLowerCase().startsWith(value.toLowerCase()) ||
           status[item.status].title.toLowerCase().startsWith(value.toLowerCase())
-
+          
         const includes =
           item.full_name.toLowerCase().includes(value.toLowerCase()) ||
           item.post.toLowerCase().includes(value.toLowerCase()) ||
@@ -114,8 +115,6 @@ const DataTableWithButtons = () => {
       previousClassName='page-item prev'
       previousLinkClassName='page-link'
       pageLinkClassName='page-link'
-      breakClassName='page-item'
-      breakLinkClassName='page-link'
       containerClassName='pagination react-paginate separated-pagination pagination-sm justify-content-end pr-1 mt-1'
     />
   )

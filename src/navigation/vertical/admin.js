@@ -12,6 +12,13 @@ export default [
         icon: <Users size={20} />,
         navLink: '/admin/announcement'
       },
+
+      // {
+      //   id: 'add-home',
+      //   title: 'Home',
+      //   icon: <Users size={20} />,
+      //   navLink: '/admin/home'
+      // },
       {
         id: 'add-course',
         title: 'courses',
